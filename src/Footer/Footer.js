@@ -3,7 +3,7 @@ import styles from "./Footer.module.css"
 
 export const Footer = () => {
   return (
-    <div className='text-center  w-100 bottom-0 bg-info'>
+    <div className='text-center position-fixed w-100 bottom-0 bg-info'>
       
       <p className={`${styles.footerP} text-white`}>&copy; By Jagadeesh </p>
       <a href='mailto:vyomanautjagadeesh@gmail.com' target=' blank'><img src='https://cdn-icons-png.flaticon.com/128/5968/5968534.png' alt='Gmail' className={styles.footImg}/></a>
