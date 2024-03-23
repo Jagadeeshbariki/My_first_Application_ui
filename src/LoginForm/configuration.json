@@ -1,0 +1,28 @@
+[
+    {
+        "UIL": "User Name",
+        "tagName":"input",
+        "type" : "text",
+        "model":"User Id",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder":"Enter User Id",
+        "criteria":[
+            "required",
+            "EmailFormat"
+        ]
+    },
+    {
+        "UIL": "Password",
+        "tagName":"input",
+        "type" : "password",
+        "model":"pwd",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder": "Enter Password",
+        "criteria":[
+            "required",
+            "Min5Char"
+        ]
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "UIL": "Full Name",
+        "tagName":"input",
+        "type" : "text",
+        "model":"FulName",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder":"Full Name",
+        "criteria":[
+            "required"
+        ]
+    },
+    {
+        "UIL": "User ID",
+        "tagName":"input",
+        "type" : "text",
+        "model":"UserID",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder": "Enter User ID or Email",
+        "criteria":[
+            "required",
+            "EmailFormat"
+        ]
+    },
+    {
+        "UIL": "Password",
+        "tagName":"input",
+        "type" : "password",
+        "model":"pwd",
+        "ErrorMessage":"",
+        "value":"", 
+        "PlaceHolder": "Enter Password",
+        "criteria":[
+            "required",
+            "Min5Char"
+        ]
+    },
+    {
+        "UIL": "Date Of Birth",
+        "tagName":"input",
+        "type" : "date",
+        "model":"DOB",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder": "Enter Password",
+        "criteria":[
+            "required"
+        ]
+    },
+    {
+        "UIL": "Gender",
+        "tagName":"input",
+        "type" : "radio",
+        "model":"gender",
+        "ErrorMessage":"",
+        "options":["Male", "Female", "Others"],
+        "values":["M", "F", "O"],
+        "value":"",
+        "criteria":[
+            "required"
+        ]
+    },
+    {
+        "UIL": "Hobbies",
+        "tagName":"input",
+        "type" : "checkbox",
+        "model":"hobbies",
+        "ErrorMessage":"",
+        "options":["Cricket", "Football", "Reading Books", "Watching TV"],
+        "values":["Cr", "Fb", "Rb", "TV"],
+        "value":"",
+        "criteria":[
+            "required"
+        ]
+    },
+    {
+        "UIL": "Country",
+        "tagName":"select",
+        "model":"country",
+        "ErrorMessage":"",
+        "options":["India", "China", "Pakistan", "UK", "US"],
+        "values":["IN", "CH", "PK", "UK", "US"],
+        "value":"",
+        "criteria":[
+            "required"
+        ]
+    },
+    {
+        "UIL": "Address",
+        "tagName":"textarea",
+        "model":"address",
+        "ErrorMessage":"",
+        "value":"",
+        "PlaceHolder":"Enter Your Address",
+        "criteria":[
+            "required"
+        ]
+    }
+    
+    
+]
