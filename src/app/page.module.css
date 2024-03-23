@@ -1,4 +1,7 @@
-/* .clr{
-  margin-bottom: 500px;
-  background-color: red;
-} */
+.bg{
+  color: red;
+}
+
+.formMargin{
+  margin-bottom: 160px;
+}

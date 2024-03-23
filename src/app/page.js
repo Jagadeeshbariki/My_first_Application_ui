@@ -4,7 +4,7 @@ import LogForm from "@/LoginForm";
 
 export default function Home() {
   return (
-    <div className={styles.clr}>
+    <div className={styles.bg} >
       <LogForm/>
     </div>
   );

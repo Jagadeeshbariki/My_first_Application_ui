@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { handleFeiledValidation, handleFormValidation } from '@/validations/appValidation';
 import TextArea from '@/inputControlls/TextArea';
 import Select from '@/inputControlls/Select';
+import styles from '@/app/page.module.css'
 
 const page = () => {
   const [inpControls, setInpConstrols] = React.useState(inpConfig);
@@ -41,7 +42,7 @@ const page = () => {
 
 
   return (
-    <div className='constainer-fluid'>
+    <div className={`constainer-fluid ${styles.formMargin}`}>
       <h2 className='text-center'>Register Here</h2>
       {
         inpControls.map((obj, ind)=>{
