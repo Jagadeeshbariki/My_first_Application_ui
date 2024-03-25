@@ -5,7 +5,7 @@ const TextArea = ({value, model, handleChange, PlaceHolder}) => {
   return (
     <>
         {/* <TextArea /> */}
-        <textarea onChange={handleChange} name={model} placeholder={PlaceHolder} className='form-control mb-2' />
+        <textarea value={value} onChange={handleChange} name={model} placeholder={PlaceHolder} className='form-control mb-2' />
     </>
   );
 }

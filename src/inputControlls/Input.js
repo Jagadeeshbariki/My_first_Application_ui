@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 // This is the Input Component for all the inputfield in the application
-const Input = ({model, PlaceHolder, type, handleChange, options, values}) => {
+const Input = ({model,value, PlaceHolder, type, handleChange, options, values}) => {
 
 
     switch (type){
@@ -11,7 +11,7 @@ const Input = ({model, PlaceHolder, type, handleChange, options, values}) => {
       case 'date':
         return (
           <>
-              <input onChange={handleChange} name={model} placeholder={PlaceHolder} type={type} className='form-control mb-2'/>
+              < input value={value} onChange={handleChange} name={model} placeholder={PlaceHolder} type={type} className='form-control mb-2'/>
           </>
         );
 
@@ -20,7 +20,7 @@ const Input = ({model, PlaceHolder, type, handleChange, options, values}) => {
           <>
           {
             options.map((val, ind)=>{
-              return <p key={ind}>< input  onChange={handleChange} name={model} type={type} className='m-1'/>{val}</p>
+              return <p key={ind}>< input checked={value == values[ind]} value={values[ind]} onChange={handleChange} name={model} type={type} className='m-1'/>{val}</p>
             })
           }
           </>
@@ -31,7 +31,7 @@ const Input = ({model, PlaceHolder, type, handleChange, options, values}) => {
           <>
           {
             options.map((val, ind)=>{
-              return <p key={ind}><input  onChange={handleChange} name={model} type={type} className='m-1'/>{val}</p>
+              return <p key={ind}><input checked={value.split(',').includes(values[ind])} value={values[ind]} onChange={handleChange} name={model} type={type} className='m-1'/>{val}</p>
             })
           }
           </>

@@ -5,18 +5,42 @@ import loginConfig from "./configuration.json";
 import Link from 'next/link';
 import Input from '@/inputControlls/Input';
 import { handleFeiledValidation, handleFormValidation } from '@/validations/appValidation';
+import { Api } from '@/Common/Api';
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const LogForm = () => {
   const [inpControlers, setInpControlers] = React.useState(loginConfig)
+  const dispatch = useDispatch(); // Alternate to Appstore.dispatch (method)
+  // const state = useSelector((state)=>state)
   
-  const handleLogin=()=>{
-    const [dataObj, UpdatedInputControllers, isFormInvalid ] = handleFormValidation(inpControlers)
+  const handleLogin= async()=>{
+    try{
+      const [dataObj, UpdatedInputControllers, isFormInvalid ] = handleFormValidation(inpControlers)
     if(isFormInvalid){
       setInpControlers(UpdatedInputControllers);
       return;
     }
-    console.log("sending reqest to the server")
-    console.log( dataObj)
+
+    dispatch({type:"LOADER", payload:true})
+    dispatch({type:"AUTH", payload:true});
+     const res = await Api.fnSendPostReq('std/login', {data:dataObj})
+     
+     if(res?.data?.length){
+        toast.success("Successfully LoggedIn")
+        
+     }
+     else{
+      toast.error("Invalid User Id or Password");
+     }
+    
+    }
+    catch(ex){
+      console.log("login", ex)
+    }
+    finally{
+      dispatch({type:"LOADER", payload:false})
+    }
   }
 
   const fnChange=(eve)=>{

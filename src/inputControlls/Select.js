@@ -1,11 +1,11 @@
 'use client'
 import React from 'react';
 
-const Select = ({options, values, model, handleChange}) => {
-    console.log(options)
+const Select = ({options,value, values, model, handleChange}) => {
+
   return (
     <>
-        <select name={model} onChange={handleChange} className='form-constrol mb-3'>
+        <select value={value} name={model} onChange={handleChange} className='form-constrol mb-3'>
             <option>------Please Select------</option>
             {
                 options.map((val, ind)=>{

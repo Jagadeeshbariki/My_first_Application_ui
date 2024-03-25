@@ -3,7 +3,7 @@
         "UIL": "User Name",
         "tagName":"input",
         "type" : "text",
-        "model":"User Id",
+        "model":"UserID",
         "ErrorMessage":"",
         "value":"",
         "PlaceHolder":"Enter User Id",
